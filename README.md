@@ -3,11 +3,13 @@ TODO:
 - find where DP is evaluated on GPU
 - change such that DP is checked on Y rather than X
 - change such that if DP good save point to file tame.dat or wild.dat possibly wild2.dat
-? possibly split dat files based on last non DP Char of Y ie DP = 6 xxxxF000000 would go into wildF.dat
+- ? possibly split dat files based on last non DP Char of Y ie DP = 6 xxxxF000000 would go into wildF.dat
 - output file(s) should be in the format of (Y value) space (offset from given startpoint) 
   if tame this would be pointG if wild would be distance from given public key point.
-
+- remove unneeded checks and ram usage
+  
 ----------------Original Readme ----------------------------------------------
+
 (c) 2024, RetiredCoder (RC)
 
 RCKangaroo is free and open-source (GPLv3).
@@ -89,3 +91,4 @@ v1.0:
 
 
 - initial release.
+
