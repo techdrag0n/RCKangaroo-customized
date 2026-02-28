@@ -1,19 +1,43 @@
+My Ramplings:
+-------------------
+About:
+
 Im a hobbiest c++/CUDA programmer with no formal training in programming.
   I have been working on my own Kangaroo software for some time now. 
 I found this project and discovered it apears to make several improvments over my current implementation 
 not only the SOTA search but raw points generated per second.
+
+Goal:
 Im hoping I can modify this to work for creating the points for my own searches as well as learn more about
  how the SOTO/SOTO+ works and hopefully implement it into my own searches if its not already.
 
+Why:
+Im hoping to use this to improve my own point generation. I am using this partialy for the puzzles. Im also using it for other testing I am trying.
+
+Current Status:
+Im currently running a program that genrates points based off of a given 
+
 TODO:
-- understand SOTA/SOTA+
+- move todo and About to own file(s)
+- add comments to code for better understanding
+- better understand SOTA/SOTA+
+	It apears I am already utilizing some of these in my own 
+- 
 - find where DP is evaluated on GPU
-- change such that DP is checked on Y rather than X
-- change such that if DP good save point to file tame.dat or wild.dat possibly wild2.dat
-- ? possibly split dat files based on last non DP Char of Y ie DP = 6 xxxxF000000 would go into wildF.dat
-- output file(s) should be in the format of (Y value) space (offset from given startpoint) 
+** change such that DP is checked on Y rather than X
+	Hopefully done? 
+
+** change such that if DP good save point to file tame.dat or wild.dat
+
+- output file(s) should be in the format of (Y value) space (offset from given startpoint) all values should be in hex. 
   if tame this would be pointG if wild would be distance from given public key point.
-- remove unneeded checks and ram usage
+  
+  
+- * remove unneeded checks and ram usage if any
+- * possibly split dat files based on last non DP Char of Y ie DP = 6 xxxxF000000 would go into wildF.dat
+todo key:
+** = critical for this to succede.
+* = could help improve my personal usage.
   
 ----------------Original Readme ----------------------------------------------
 

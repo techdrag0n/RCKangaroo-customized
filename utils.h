@@ -61,7 +61,7 @@ public:
 	void Leave() { UNLOCK_CS(&cs_body); };
 };
 
-#pragma pack(push, 1)
+#pragma pack(push, 1) // remove padding , we need to save memory
 struct TListRec
 {
 	u16 cnt;

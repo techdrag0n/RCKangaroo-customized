@@ -400,7 +400,7 @@ bool SolvePoint(EcPoint PntToSolve, int Range, int DP, EcInt* pk_res)
 		EcJumps3[i].dist.data[0] &= 0xFFFFFFFFFFFFFFFE; //must be even
 		EcJumps3[i].p = ec.MultiplyG(EcJumps3[i].dist);
 	}
-	SetRndSeed(GetTickCount64());
+	SetRndSeed(GetTickCount64());  
 
 	Int_HalfRange.Set(1);
 	Int_HalfRange.ShiftLeft(Range - 1);
@@ -435,7 +435,7 @@ bool SolvePoint(EcPoint PntToSolve, int Range, int DP, EcInt* pk_res)
 	u32 ThreadID;
 	gSolved = false;
 	ThrCnt = GpuCnt;
-	for (int i = 0; i < GpuCnt; i++)
+	for (int i = 0; i < GpuCnt; i++) // create 1 thread per GPU, each thread will call Execute() method of corresponding RCGpuKang object
 	{
 #ifdef _WIN32
 		thr_handles[i] = (HANDLE)_beginthreadex(NULL, 0, kang_thr_proc, (void*)GpuKangs[i], 0, &ThreadID);
@@ -683,7 +683,7 @@ int main(int argc, char* argv[])
 		printf("Solving public key\r\nX: %s\r\nY: %s\r\n", sx, sy);
 		gStart.GetHexStr(sx);
 		printf("Offset: %s\r\n", sx);
-
+		  //  
 		if (!SolvePoint(PntToSolve, gRange, gDP, &pk_found))
 		{
 			if (!gIsOpsLimit)
