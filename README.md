@@ -1,4 +1,4 @@
-My Ramplings:
+My Ramblings:
 -------------------
 About:
 
@@ -14,6 +14,8 @@ Im hoping I can modify this to work for creating the points for my own searches 
 Why:
 Im hoping to use this to improve my own point generation. I am using this partialy for the puzzles. Im also using it for other testing I am trying.
 
+
+
 Current Status:
 Im currently running a program that genrates points based off of a given 
 
@@ -22,20 +24,20 @@ TODO:
 - add comments to code for better understanding
 - better understand SOTA/SOTA+
 	It apears I am already utilizing some of these in my own 
-- 
+
 - find where DP is evaluated on GPU
 ** change such that DP is checked on Y rather than X
 	Hopefully done? 
 
 ** change such that if DP good save point to file tame.dat or wild.dat
-
-- output file(s) should be in the format of (Y value) space (offset from given startpoint) all values should be in hex. 
-  if tame this would be pointG if wild would be distance from given public key point.
+	- output file(s) should be in the format of (Y value) space (offset from given startpoint) all values should be in hex. 
+  if tame this would be pointG if wild would be distance from given public key point. a sample tame file created with other software is wild_2026-01-04-09-16-16.txt
   
-  
-- * remove unneeded checks and ram usage if any
+- * remove unneeded checks and ram usage if any  
 - * possibly split dat files based on last non DP Char of Y ie DP = 6 xxxxF000000 would go into wildF.dat
+    
 todo key:
+
 ** = critical for this to succede.
 * = could help improve my personal usage.
   
@@ -122,4 +124,5 @@ v1.0:
 
 
 - initial release.
+
 
