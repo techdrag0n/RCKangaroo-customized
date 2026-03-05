@@ -31,7 +31,7 @@ TODO:
 
 ** change such that if DP good save point to file tame.dat or wild.dat
 	- output file(s) should be in the format of (Y value) space (offset from given startpoint) all values should be in hex. 
-  if tame this would be pointG if wild would be distance from given public key point. a sample tame file created with other software is wild_2026-01-04-09-16-16.txt
+  if tame this would be pointG if wild would be distance from given public key point. a sample tame file created with other software is wild_2026-01-04-09-16-16.txt  I FORGOT Im also keeping the inverse ie Y (mod 0x1000000) = 0xFFFC2F
   
 - * remove unneeded checks and ram usage if any  
 - * possibly split dat files based on last non DP Char of Y ie DP = 6 xxxxF000000 would go into wildF.dat
@@ -124,5 +124,6 @@ v1.0:
 
 
 - initial release.
+
 
 
